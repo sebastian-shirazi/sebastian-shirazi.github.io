@@ -35,14 +35,19 @@
   flex-wrap: wrap;
 }
 
-.footer-links a {
+.footer-links button {
+  background: none;
+  border: none;
   color: #a0aec0;
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
   transition: color 0.3s ease;
+  padding: 0;
 }
 
-.footer-links a:hover {
+.footer-links button:hover {
   color: #667eea;
 }
 
