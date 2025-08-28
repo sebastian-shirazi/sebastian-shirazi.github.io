@@ -23,6 +23,9 @@ const Header = () => {
       }
     };
 
+    // Call handleScroll immediately to set the correct active section on page load
+    handleScroll();
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
