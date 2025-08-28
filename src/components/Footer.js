@@ -4,6 +4,13 @@ import './Footer.css';
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -14,11 +21,11 @@ const Footer = () => {
           </div>
           
           <div className="footer-links">
-            <a href="#hero">Home</a>
-            <a href="#about">About</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+            <button onClick={() => scrollToSection('hero')}>Home</button>
+            <button onClick={() => scrollToSection('about')}>About</button>
+            <button onClick={() => scrollToSection('skills')}>Skills</button>
+            <button onClick={() => scrollToSection('projects')}>Projects</button>
+            <button onClick={() => scrollToSection('contact')}>Contact</button>
           </div>
           
           <div className="footer-social">
