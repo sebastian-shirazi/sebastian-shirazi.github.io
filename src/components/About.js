@@ -9,7 +9,7 @@ const About = () => {
           <h2 className="section-title">About Me</h2>
           <p className="section-subtitle">Get to know more about me!</p>
         </div>
-        
+
         <div className="about-content">
           <div className="about-text">
             <div className="about-intro">
@@ -21,34 +21,34 @@ const About = () => {
                 and used by everyday people.
               </p>
             </div>
-            
+
             <div className="about-details">
               <div className="detail-item">
                 <h4>Background</h4>
                 <p>
                   With a strong education background in data structures, software deisgn principles, and even
-                  computational theory I hope to bring some analytical thinking and design skills to the workplace. 
+                  computational theory I hope to bring some analytical thinking and design skills to the workplace.
                   I am a big proponent of clean, simplistic code that is not only functional but eligant.
                 </p>
               </div>
-              
+
               <div className="detail-item">
                 <h4>Interests</h4>
                 <p>
                   As I already touched on before, I love to stay active and fit. I grew up playing a variety
                   of sports and have now switched to weightlifting as my life has progressed. I also love all
-                  things music, whether that be classical, dad rock, and especially rap (listen to Nettspend trust me). 
+                  things music, whether that be classical, dad rock, and especially rap (listen to Nettspend trust me).
                   This interest stems from me playing piano and violin as I was growing up!
                 </p>
               </div>
-              
+
               <div className="detail-item">
                 <p>
                   Come check out my spotify if you would like (not quite sure if my playlists are public...)
                 </p>
-                <a 
-                  href="https://open.spotify.com/user/vividphoenix1" 
-                  target="_blank" 
+                <a
+                  href="https://open.spotify.com/user/vividphoenix1"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="spotify-link"
                 >
@@ -59,7 +59,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="about-visual">
             <div className="about-card">
               <div className="card-header">
@@ -75,18 +75,18 @@ const About = () => {
                     <p>Minor in Engineering Business</p>
                   </div>
                 </div>
-                
+
                 <div className="fact-item">
                   <div className="fact-content">
                     <h4>Experience</h4>
                     <p>3+ years in Python, Java, and C experience</p>
-                    <p> Software Engineering - Built a web application for event planning, 
+                    <p> Software Engineering - Built a web application for event planning,
                         course registration, and for a portfolio website
                     </p>
                     <p>Cybersecurity - Intered on Threat Detection and Response team,
                         worked on backend development for an OSINT Threat Intelligence Platform
                     </p>
-                    <p>AI - LLM Research Assistant at UVA building unity pipeline with GPT-4o, 
+                    <p>AI - LLM Research Assistant at UVA building unity pipeline with GPT-4o,
                         knowledable in AI development tools
                     </p>
                   </div>
@@ -95,14 +95,14 @@ const About = () => {
             </div>
           </div>
         </div>
-        
+
         <div className="resume-section">
           <div className="resume-card">
             <h3>Resume</h3>
             <p>Please feel free to view my resume!</p>
-            <a 
-              href="/Sebastian-Resume-F25.pdf" 
-              target="_blank" 
+            <a
+              href="/Sebastian-Resume-Updated.pdf"
+              target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"
             >
