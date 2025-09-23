@@ -101,7 +101,7 @@ const About = () => {
             <h3>Resume</h3>
             <p>Please feel free to view my resume!</p>
             <a
-              href="/Sebastian-Resume-Updated.pdf"
+              href="/Sebastian-Resume-F25.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="resume-btn"
