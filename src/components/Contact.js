@@ -92,7 +92,7 @@ const Contact = () => {
                   id="email"
                   name="email"
                   required
-                  placeholder="your.email@example.com"
+                  placeholder="email@example.com"
                 />
               </div>
               
@@ -110,12 +110,11 @@ const Contact = () => {
               <div className="form-group">
                 <label htmlFor="message">Message</label>
                 <textarea
+                  type="text"
                   id="message"
                   name="message"
                   ref={textareaRef}
-                  required
-                  rows="3"
-                  placeholder="Leave your message here..."
+                  placeholder="Your message here..."
                   onChange={handleTextareaChange}
                   style={{ resize: 'none', overflow: 'hidden' }}
                 ></textarea>
