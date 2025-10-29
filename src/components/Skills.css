@@ -55,13 +55,34 @@
   border-color: #667eea;
 }
 
+.skill-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: #667eea;
+  display: flex;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.skill-card:hover .skill-icon {
+  color: #764ba2;
+  transform: scale(1.1);
+}
+
 .skill-name {
   font-size: 1.3rem;
   font-weight: 600;
   color: #2d3748;
-  margin: 0 0 1rem 0;
-  border-bottom: 2px solid #e2e8f0;
-  padding-bottom: 0.5rem;
+  margin: 0;
 }
 
 .skill-description {
