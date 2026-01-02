@@ -91,7 +91,7 @@ const About = () => {
                   <div className="fact-content resume-link-content">
                     <span>View my Resume - </span>
                     <a
-                      href="/Sebastian-Resume-F25.pdf"
+                      href="/Sebastian-Shirazi-Resume.pdf"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="resume-btn"
