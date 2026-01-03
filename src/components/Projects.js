@@ -5,8 +5,8 @@ const Projects = () => {
   const projects = [
     {
       title: "Machine Learning for Weather Prediction",
-      description: "Jupyter notebooks that examines two European cities based on 10-year weather data to predict and asses the accuracy of 1-day and 7-day weather forcasts using machine learning methods (FFNN/LSTM/Random Forest).",
-      technologies: ["Python", "Matplotlib", "Kaggle", "numpy", "pandas", "scikit-learn", "tensoflow metal"],
+      description: "Jupyter notebooks that examine two European cities based on 10-year weather data to predict and assess the accuracy of 1-day and 7-day weather forecasts using machine learning methods (FFNN/LSTM/Random Forest).",
+      technologies: ["Python", "Matplotlib", "Kaggle", "numpy", "pandas", "scikit-learn", "tensorflow-metal"],
       image: "🌤️",
       github: "https://github.com/sebastian-shirazi/AI-Driven-Risk-Assessment-for-Basketball",
       featured: true
@@ -14,7 +14,7 @@ const Projects = () => {
     {
       title: "Hoos Hooping",
       description: "Mobile application aimed to bring university students together to arrange pickup basketball games through creating games in the app, inviting their friends to games, and having chat and maps functionality for games.",
-      technologies: ["Javascript", "Typscript", "Expo Go", "Node.js", "MySQL 8.0", "Google CloudSQL", "Google OAuth", "React Native Maps"],
+      technologies: ["JavaScript", "TypeScript", "Expo", "Node.js", "MySQL", "Google Cloud SQL", "Google OAuth", "React Native Maps"],
       image: "🏀",
       github: "https://github.com/sebastian-shirazi/HoosHooping",
       featured: true
@@ -29,7 +29,7 @@ const Projects = () => {
     },
     {
       title: "Event Management App",
-      description: "Full stack web application for managing events, with functionality for loggin in via Google OAuth, creating events, RSVPing to events, leaving messages on events, and attaching files to evevnts. Admin accounts can also be created and have elavated functionality.",
+      description: "Full stack web application for managing events, with functionality for logging in via Google OAuth, creating events, RSVPing to events, leaving messages on events, and attaching files to events. Admin accounts can also be created and have elevated functionality.",
       technologies: ["Python", "CSS", "HTML", "Bootstrap", "Django", "SQLite", "AWS S3", "Heroku", "Google OAuth"],
       image: "🗓️",
       github: "https://github.com/sebastian-shirazi",
@@ -54,7 +54,7 @@ const Projects = () => {
     {
       title: "Pagetable Implementation",
       description: "Simulates a multi-level page-table that stores mappings between physical and virtual addresses written in C.",
-      technologies: ["C", "SSH", "VSCode", "Makefile"],
+      technologies: ["C", "SSH", "VS Code", "Makefile"],
       image: "📖",
       github: "https://github.com/sebastian-shirazi/pagetables",
       featured: false
