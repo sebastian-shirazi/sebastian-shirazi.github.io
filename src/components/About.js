@@ -82,7 +82,7 @@ const About = () => {
                         worked on backend development for an OSINT Threat Intelligence Platform
                     </p>
                     <p>AI - LLM Research Assistant at UVA building unity pipeline with GPT-4o,
-                        knowledable in AI development tools
+                       comfortable with a variety of AI development tools from chatbots to agentic coders
                     </p>
                   </div>
                 </div>
