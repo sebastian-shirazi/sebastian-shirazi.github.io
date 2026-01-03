@@ -74,7 +74,8 @@ const About = () => {
                 <div className="fact-item">
                   <div className="fact-content">
                     <h4>Experience</h4>
-                    <p>3+ years in Python, Java, and C experience</p>
+                    <p>3+ years Python, Java, and C coding</p>
+                    <br></br>
                     <p> Software Engineering - Built multiple web applications, mobile applications, and
                       have designed Full Stack applications from scratch to deployment
                     </p>
