@@ -75,8 +75,8 @@ const About = () => {
                   <div className="fact-content">
                     <h4>Experience</h4>
                     <p>3+ years in Python, Java, and C experience</p>
-                    <p> Software Engineering - Built a web application for event planning,
-                        course registration, online truth verification platform,and for a portfolio website
+                    <p> Software Engineering - Built multiple web applications, mobile applications, and
+                      have designed Full Stack applications from scratch to deployment
                     </p>
                     <p>Cybersecurity - Intered on Threat Detection and Response team,
                         worked on backend development for an OSINT Threat Intelligence Platform
