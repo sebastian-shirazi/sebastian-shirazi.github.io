@@ -13,7 +13,21 @@ import {
   DiHeroku,
   DiVisualstudio
 } from 'react-icons/di';
-import { SiFlask, SiDjango, SiC } from 'react-icons/si';
+import {
+  SiFlask,
+  SiDjango,
+  SiC,
+  SiTypescript,
+  SiReact,
+  SiExpo,
+  SiBootstrap,
+  SiNodedotjs,
+  SiMysql,
+  SiSqlite,
+  SiGoogle,
+  SiGooglecloud,
+  SiUnity
+} from 'react-icons/si';
 
 const Skills = () => {
   const skillCategories = [
@@ -26,9 +40,29 @@ const Skills = () => {
           description: "Built this website using React for the frontend."
         },
         {
+          name: "TypeScript",
+          icon: <SiTypescript />,
+          description: "Used TypeScript to build typed, maintainable UI features in my mobile/web projects."
+        },
+        {
           name: "JavaScript",
           icon: <DiJavascript1 />,
           description: "Used JavaScript for a variety of projects for handling user web experience, both in and out of school."
+        },
+        {
+          name: "React Native",
+          icon: <SiReact />,
+          description: "Built mobile app features in React Native, including screens, navigation, and map-based experiences."
+        },
+        {
+          name: "Expo",
+          icon: <SiExpo />,
+          description: "Used Expo to develop and run React Native apps quickly during iteration and testing."
+        },
+        {
+          name: "Bootstrap",
+          icon: <SiBootstrap />,
+          description: "Used Bootstrap components and utility classes to speed up responsive UI styling."
         },
         {
           name: "HTML/CSS",
@@ -44,6 +78,21 @@ const Skills = () => {
           name: "Python",
           icon: <DiPython />,
           description: "Familiar with popular libraries such as numpy and tensorflow, used for scripting, automation, and machine learning tasks."
+        },
+        {
+          name: "Node.js",
+          icon: <SiNodedotjs />,
+          description: "Built backend services and APIs with Node.js to support application features."
+        },
+        {
+          name: "MySQL",
+          icon: <SiMysql />,
+          description: "Designed and queried relational schemas in MySQL 8.0 to store application data."
+        },
+        {
+          name: "SQLite",
+          icon: <SiSqlite />,
+          description: "Used SQLite for lightweight local development and data persistence in web apps."
         },
         {
           name: "Java",
@@ -84,6 +133,21 @@ const Skills = () => {
           name: "AWS",
           icon: <DiAws />,
           description: "Deployed applications integrated with AWS services including EC2, S3, and Lambda."
+        },
+        {
+          name: "Google OAuth",
+          icon: <SiGoogle />,
+          description: "Implemented Google OAuth for authentication so users can sign in securely with their Google account."
+        },
+        {
+          name: "Google Cloud",
+          icon: <SiGooglecloud />,
+          description: "Used Google Cloud services for managed infrastructure (including hosted SQL) in full-stack projects."
+        },
+        {
+          name: "Unity",
+          icon: <SiUnity />,
+          description: "Built a Unity pipeline for 3D generative AI modeling through GPT-4o and DALL-E"
         },
         {
           name: "Heroku",
