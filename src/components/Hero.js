@@ -1,89 +1,101 @@
-import React, { useState, useEffect } from 'react';
-import './Hero.css';
+import React, { useEffect, useState } from 'react';
+import { ArrowRight, MapPin } from 'lucide-react';
 
-const Hero = () => {
-  const [scrollY, setScrollY] = useState(0);
+const phrases = [
+  "I build web applications.",
+  "I develop mobile apps.",
+  "I explore AI technologies.",
+  "I solve complex problems.",
+];
+
+export function Hero() {
+  const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [displayText, setDisplayText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
+    const phrase = phrases[currentPhrase];
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting) {
+          if (displayText.length < phrase.length) {
+            setDisplayText(phrase.slice(0, displayText.length + 1));
+          } else {
+            setTimeout(() => setIsDeleting(true), 2000);
+          }
+        } else {
+          if (displayText.length > 0) {
+            setDisplayText(displayText.slice(0, -1));
+          } else {
+            setIsDeleting(false);
+            setCurrentPhrase((prev) => (prev + 1) % phrases.length);
+          }
+        }
+      },
+      isDeleting ? 50 : 100
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, currentPhrase]);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToProjects = () => {
+    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  // Calculate opacity based on scroll position
-  const imageOpacity = Math.max(0, 1 - (scrollY / 500)); // Fade out over 500px scroll
+  const scrollToConnect = () => {
+    document.getElementById('connect')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="hero" className="hero">
-      <div className="hero-background">
-        <div className="gradient-overlay"></div>
-        <div className="floating-shapes">
-          <div className="shape shape-1"></div>
-          <div className="shape shape-2"></div>
-          <div className="shape shape-3"></div>
-        </div>
-      </div>
-      
-      <div className="hero-content">
-        <div className="hero-text">
-          <h1 className="hero-title">
-            <span className="greeting">Hello, I'm</span>
-            <span className="name">Sebastian Shirazi</span>
-          </h1>
-          <p className="hero-subtitle">
-            Undergrad CS Student & Aspiring Software Engineer
-          </p>
-          <p className="hero-description">
-            A fourth-year student at the University of Virginia 
-            who is eager to grow as a developer. With interests 
-            in Software Engineering, Artificial Intelligence, and
-            Network Security I am always looking for new opportunities.
-          </p>
-          
-          <div className="hero-buttons">
-            <button 
-              className="btn btn-secondary"
-              onClick={() => scrollToSection('projects')}
-            >
-              View My Work
-            </button>
-            <button 
-              className="btn btn-primary"
-              onClick={() => scrollToSection('contact')}
-            >
-              Get In Touch
-            </button>
+    <section id="hero" className="min-h-screen flex items-center justify-center px-6 lg:px-8 pt-16">
+      <div className="max-w-4xl mx-auto text-center">
+        <p className="text-sm uppercase tracking-wider text-muted-foreground mb-8 animate-fade-in">
+          CS Student & Aspiring Software Engineer
+        </p>
+
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight animate-fade-in-delay-1">
+          <span className="text-balance">{displayText}</span>
+          <span className="animate-pulse">|</span>
+        </h1>
+
+        <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 leading-relaxed text-balance animate-fade-in-delay-2">
+          A fourth-year student at the University of Virginia passionate about Software Engineering, 
+          Artificial Intelligence, and Network Security. Always looking for new opportunities to grow.
+        </p>
+
+        <div className="flex flex-col items-center gap-3 mb-12 animate-fade-in-delay-3">
+          <p className="text-base md:text-lg font-medium">Sebastian Shirazi</p>
+          <div className="flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+            <div className="flex items-center gap-1.5">
+              <MapPin className="w-4 h-4" />
+              <span>Springfield, VA</span>
+            </div>
+            <span className="hidden sm:inline">•</span>
+            <div className="flex items-center gap-1.5">
+              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+              <span>Available for opportunities</span>
+            </div>
           </div>
         </div>
-        
-        <div className="hero-visual">
-          <div 
-            className="profile-image"
-            style={{ opacity: imageOpacity }}
+
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-delay-4">
+          <button
+            onClick={scrollToProjects}
+            className="px-8 py-4 bg-accent text-accent-foreground rounded-lg hover:opacity-90 transition-opacity font-medium flex items-center gap-2"
           >
-            <img 
-              src="/pfp-portfolio.jpeg" 
-              alt="Sebastian Shirazi"
-            />
-          </div>
+            View My Work
+            <ArrowRight className="w-4 h-4" />
+          </button>
+          <button
+            onClick={scrollToConnect}
+            className="px-8 py-4 border border-border rounded-lg hover:bg-muted transition-colors font-medium"
+          >
+            Get In Touch
+          </button>
         </div>
-      </div>
-      
-      <div className="scroll-indicator">
-        <div className="scroll-arrow"></div>
       </div>
     </section>
   );
-};
+}
 
 export default Hero;

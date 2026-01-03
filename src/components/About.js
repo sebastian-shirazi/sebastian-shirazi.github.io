@@ -1,106 +1,129 @@
-import React from 'react';
-import './About.css';
+import React, { useEffect, useRef, useState } from 'react';
+import { FileText, Music } from 'lucide-react';
 
-const About = () => {
+export function About() {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <section id="about" className="about">
-      <div className="container">
-        <div className="section-header">
-          <h2 className="section-title">About Me</h2>
-          <p className="section-subtitle">Get to know more about me!</p>
-        </div>
+    <section id="about" className="py-32 px-6 lg:px-8" ref={sectionRef}>
+      <div className="max-w-6xl mx-auto">
+        <h2
+          className={`text-sm uppercase tracking-wider text-muted-foreground mb-16 transition-all duration-700 text-center md:text-left ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          }`}
+        >
+          About Me
+        </h2>
 
-        <div className="about-content">
-          <div className="about-text">
-            <div className="about-intro">
-              <h3>Who I Am</h3>
-              <p>
+        <div className="grid md:grid-cols-2 gap-16">
+          <div
+            className={`space-y-6 transition-all duration-700 delay-100 text-center md:text-left ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Who I Am</h3>
+              <p className="text-lg leading-relaxed text-muted-foreground">
                 I'm a passionate software developer with a love for AI technologies. When I'm not coding,
-                you can find me playing soccer, listening to some music, or getting a lift in at the gym.
-                I love learning about how technology shapes society and how evolving technology is adapted
-                and used by everyday people.
+                you can find me playing soccer, listening to music, or getting a lift in at the gym.
+                I love learning about how technology shapes society.
               </p>
-              <br />
+            </div>
 
-              <h3>Background</h3>
-              <p>
-                With a strong education background in data structures, software deisgn principles, and even
-                computational theory I hope to bring some analytical thinking and design skills to the workplace.
-                I am a big proponent of clean, simplistic code that is not only functional but eligant.
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Background</h3>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                With a strong education background in data structures, software design principles, and
+                computational theory, I bring analytical thinking and design skills to every project.
+                I'm a big proponent of clean, simplistic code that is not only functional but elegant.
               </p>
-              <br />
+            </div>
 
-              <h3>Interests</h3>
-              <p>
-                As I already touched on before, I love to stay active and fit. I grew up playing a variety
-                of sports and have now switched to weightlifting as my life has progressed. I also love all
-                things music, whether that be classical, dad rock, and especially rap (listen to Nettspend trust me).
-                This interest stems from me playing piano and violin as I was growing up!
+            <div className="space-y-4">
+              <h3 className="text-xl font-semibold">Interests</h3>
+              <p className="text-lg leading-relaxed text-muted-foreground">
+                I love staying active through weightlifting after growing up playing various sports.
+                I'm also into all things music—classical, dad rock, and especially rap. This stems
+                from playing piano and violin as I was growing up!
               </p>
-              <br />
+            </div>
 
-              <p>
-                Come check out my spotify if you would like (not quite sure if my playlists are public...)
-              </p>
+            <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
+              <a
+                href="/Sebastian-Shirazi-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-accent text-accent-foreground rounded-lg hover:opacity-90 transition-opacity text-sm font-medium"
+              >
+                <FileText className="w-4 h-4" />
+                View Resume
+              </a>
               <a
                 href="https://open.spotify.com/user/vividphoenix1"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="spotify-link"
+                className="inline-flex items-center gap-2 px-4 py-2 border border-border rounded-lg hover:bg-muted transition-colors text-sm font-medium"
               >
-                <svg className="spotify-icon" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.24 12.84c.361.181.54.78.301 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
-                </svg>
+                <Music className="w-4 h-4" />
+                My Spotify
               </a>
             </div>
           </div>
 
-          <div className="about-visual">
-            <div className="about-card">
-              <div className="card-header">
-                <h4>Professional Background</h4>
+          <div
+            className={`transition-all duration-700 delay-200 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+            }`}
+          >
+            <div className="bg-muted rounded-2xl p-8 space-y-8">
+              <div>
+                <h3 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Education</h3>
+                <div className="space-y-1">
+                  <p className="font-semibold text-lg">University of Virginia</p>
+                  <p className="text-muted-foreground">B.S. in Computer Science</p>
+                  <p className="text-muted-foreground">Minor in Data Science</p>
+                  <p className="text-muted-foreground">Minor in Engineering Business</p>
+                </div>
               </div>
-              <div className="facts-list">
-                <div className="fact-item">
-                  <div className="fact-content">
-                    <h4>Education</h4>
-                    <h6>University of Virginia </h6>
-                    <p>B.S. in Computer Science</p>
-                    <p>Minor in Data Science</p>
-                    <p>Minor in Engineering Business</p>
-                  </div>
-                </div>
 
-                <div className="fact-item">
-                  <div className="fact-content">
-                    <h4>Experience</h4>
-                    <p>3+ years Python, Java, and C coding</p>
-                    <br></br>
-                    <p> Software Engineering - Built multiple web applications, mobile applications, and
-                      have designed Full Stack applications from scratch to deployment
-                    </p>
-                    <p>Cybersecurity - Intered on Threat Detection and Response team,
-                        worked on backend development for an OSINT Threat Intelligence Platform
-                    </p>
-                    <p>AI - LLM Research Assistant at UVA building unity pipeline with GPT-4o,
-                       comfortable with a variety of AI development tools from chatbots to agentic coders
-                    </p>
-                  </div>
-                </div>
-
-                <div className="fact-item resume-item">
-                  <div className="fact-content resume-link-content">
-                    <span>View my Resume - </span>
-                    <a
-                      href="/Sebastian-Shirazi-Resume.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="resume-btn"
-                    >
-                      Resume
-                    </a>
-                  </div>
-                </div>
+              <div>
+                <h3 className="text-sm uppercase tracking-wider text-muted-foreground mb-4">Experience Highlights</h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0" />
+                    <span className="text-muted-foreground">3+ years Python, Java, and C coding</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0" />
+                    <span className="text-muted-foreground">Full Stack web & mobile application development</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0" />
+                    <span className="text-muted-foreground">Cybersecurity internship on Threat Detection team</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 bg-foreground rounded-full mt-2.5 shrink-0" />
+                    <span className="text-muted-foreground">LLM Research Assistant at UVA with GPT-4o</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -108,6 +131,6 @@ const About = () => {
       </div>
     </section>
   );
-};
+}
 
 export default About;
