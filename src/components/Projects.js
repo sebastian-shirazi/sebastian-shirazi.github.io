@@ -13,7 +13,7 @@ const Projects = () => {
     },
     {
       title: "Hoos Hooping",
-      description: "Mobile application aimed to bringing university students together to arrange pickup basketball games through create games through the app, inviting their friends to games, having chat and maps functionality for games.",
+      description: "Mobile application aimed to bring university students together to arrange pickup basketball games through creating games in the app, inviting their friends to games, and having chat and maps functionality for games.",
       technologies: ["Javascript", "Typscript", "Expo Go", "Node.js", "MySQL 8.0", "Google CloudSQL", "Google OAuth", "React Native Maps"],
       image: "🏀",
       github: "https://github.com/sebastian-shirazi/HoosHooping",
