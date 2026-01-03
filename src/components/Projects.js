@@ -4,8 +4,8 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
-      title: "Jupyter Notebooks for Machine Learning Models for Weather Prediciton",
-      description: "Examines two European cities based on 10-year weather data to predict and asses the accuracy of 1-day and 7-day weather forcasts using machine learning methods (FFNN/LSTM/Random Forest).",
+      title: "Machine Learning for Weather Prediction",
+      description: "Jupyter notebooks that examines two European cities based on 10-year weather data to predict and asses the accuracy of 1-day and 7-day weather forcasts using machine learning methods (FFNN/LSTM/Random Forest).",
       technologies: ["Python", "Matplotlib", "Kaggle", "numpy", "pandas", "scikit-learn", "tensoflow metal"],
       image: "🌤️",
       github: "https://github.com/sebastian-shirazi/AI-Driven-Risk-Assessment-for-Basketball",
@@ -33,7 +33,7 @@ const Projects = () => {
       technologies: ["Python", "CSS", "HTML", "Bootstrap", "Django", "SQLite", "AWS S3", "Heroku", "Google OAuth"],
       image: "🗓️",
       github: "https://github.com/sebastian-shirazi",
-      featured: true
+      featured: false
     },
     {
         title: "3D Gen AI Modeling with Unity",
