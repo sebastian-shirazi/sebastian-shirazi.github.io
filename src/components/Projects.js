@@ -4,6 +4,22 @@ import './Projects.css';
 const Projects = () => {
   const projects = [
     {
+      title: "Jupyter Notebooks for Machine Learning Models for Weather Prediciton",
+      description: "Examines two European cities based on 10-year weather data to predict and asses the accuracy of 1-day and 7-day weather forcasts using machine learning methods (FFNN/LSTM/Random Forest).",
+      technologies: ["Python", "Matplotlib", "Kaggle", "numpy", "pandas", "scikit-learn", "tensoflow metal"],
+      image: "🌤️",
+      github: "https://github.com/sebastian-shirazi/AI-Driven-Risk-Assessment-for-Basketball",
+      featured: true
+    },
+    {
+      title: "Hoos Hooping",
+      description: "Mobile application aimed to bringing university students together to arrange pickup basketball games through create games through the app, inviting their friends to games, having chat and maps functionality for games.",
+      technologies: ["Javascript", "Typscript", "Expo Go", "Node.js", "MySQL 8.0", "Google CloudSQL", "Google OAuth", "React Native Maps"],
+      image: "🏀",
+      github: "https://github.com/sebastian-shirazi/HoosHooping",
+      featured: true
+    },
+    {
         title: "AI Powered Risk Assessment Tool",
         description: "Uses AI to analyze video footage of basketball players to assess their risk of injury based on their movement patterns, considering factors such as fatigue, differentiation from proper form, and position of key joints.",
         technologies: ["Python", "mediapipe", "numpy", "pandas", "opencv-python"],
