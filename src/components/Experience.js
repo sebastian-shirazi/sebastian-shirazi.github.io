@@ -7,24 +7,19 @@ export function Experience() {
   // Placeholder experiences - Sebastian can fill these in later
   const experiences = [
     {
-      title: "Lead Designer",
-      company: "Google",
-      period: "2022 - Present",
+      title: "Undergraduate Research Assistant",
+      company: "UVA",
+      period: "Jan 2025 - Dec 2025",
     },
     {
-      title: "Senior Product Designer",
-      company: "Stripe",
-      period: "2020 - 2022",
+      title: "Cybersecurity Technology Consultant Intern",
+      company: "EY",
+      period: "Jun 2025 - Aug 2025",
     },
     {
-      title: "Product Designer",
-      company: "Airbnb",
-      period: "2018 - 2020",
-    },
-    {
-      title: "UI/UX Designer",
-      company: "Dropbox",
-      period: "2016 - 2018",
+      title: "Software Engineering Intern",
+      company: "Core4ce",
+      period: "May 2024 - Aug 2024",
     },
   ];
 
