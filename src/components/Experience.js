@@ -7,6 +7,11 @@ export function Experience() {
   // Placeholder experiences - Sebastian can fill these in later
   const experiences = [
     {
+      title: "Software Engineer",
+      company: "Optimum Technologies",
+      period: "Mar 2026 - Present",
+    },
+    {
       title: "Undergraduate Research Assistant",
       company: "UVA",
       period: "Jan 2025 - Dec 2025",

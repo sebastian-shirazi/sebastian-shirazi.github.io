@@ -9,7 +9,7 @@ export function Projects() {
       title: "Machine Learning for Weather Prediction",
       description: "Jupyter notebooks that examine two European cities based on 10-year weather data to predict and assess the accuracy of 1-day and 7-day weather forecasts using machine learning methods (FFNN/LSTM/Random Forest).",
       tags: ["Python", "Machine Learning", "Data Science"],
-      github: "https://github.com/sebastian-shirazi/AI-Driven-Risk-Assessment-for-Basketball",
+      github: "https://github.com/sebastian-shirazi/ds3001-final",
     },
     {
       title: "Hoos Hooping",
